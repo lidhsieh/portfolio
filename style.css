@@ -10,11 +10,13 @@ body {
     color: #000;
 }
 
-.nav-link {
+.nav-link,
+.collapse-item {
     color: #000 !important;
 }
 
-.nav-item.top {
+.nav-item.top,
+.sidebar {
     padding: 10px 10px;
     text-transform: uppercase;
     letter-spacing: .1em;
@@ -44,10 +46,12 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 .image-container {
-  position: relative; /* 必要：作為定位基準 */
-  width: 100%;
-  display: inline-block;
+    position: relative;
+    /* 必要：作為定位基準 */
+    width: 100%;
+    display: inline-block;
 }
 
 .image-info {
@@ -64,6 +68,7 @@ body {
 .white {
     color: #fff !important;
 }
+
 .btn-outline-white {
     border-color: #fff !important;
     color: #fff !important;
@@ -78,8 +83,30 @@ body {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-   
+
 }
-.round{
-     border-radius: 10px;
+
+.round {
+    border-radius: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+}
+.sidebar.show {
+    right: 0; /* 滑入畫面 */
+    transition: right 0.3s ease; /* 加動畫效果 */
+}
+
+.collapse-item {
+    /* padding: 1em; */
+    margin: 1em;
 }
