@@ -13,6 +13,7 @@ body {
 
 .nav-link {
     color: #000 !important;
+    
 }
 
 .title {
@@ -28,6 +29,9 @@ body {
     font-size: clamp(16px, 1vw, 24px);
 }
 
+.dropdown-menu{
+    z-index: 1000;
+}
 
 /*-------------index---------------*/
 

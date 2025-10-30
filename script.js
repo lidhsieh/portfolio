@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const html = await response.text();
   navbarContainer.innerHTML = html;
 
-  // 等 innerHTML 插入後再抓 DOM
+  // Sidebar hamburger
   const burger = document.getElementById("sidebar-toggle");
   const sidebar = document.getElementById("sidebar");
 
@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 });
-
 
 // footer
 const footer = document.createElement('footer');
