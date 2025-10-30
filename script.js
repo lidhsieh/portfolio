@@ -1,18 +1,26 @@
-const burger = document.getElementById('sidebar-toggle');
-const sidebar = document.getElementById('sidebar');
+document.addEventListener("DOMContentLoaded", async () => {
+  const navbarContainer = document.getElementById("navbar");
+  if (!navbarContainer) return;
 
-// 點擊 burger toggle sidebar
-burger.addEventListener('click', (e) => {
-  sidebar.classList.toggle('show');
-  e.stopPropagation(); // 阻止事件冒泡，避免點 burger 被 document click 立刻關閉
-});
+  // 載入 Navbar.html
+  const response = await fetch("navbar.html");
+  const html = await response.text();
+  navbarContainer.innerHTML = html;
 
-// 點擊 sidebar 本身不關閉
-sidebar.addEventListener('click', (e) => {
-  e.stopPropagation(); // 點擊 sidebar 內容時也阻止冒泡
-});
+  // 等 innerHTML 插入後再抓 DOM
+  const burger = document.getElementById("sidebar-toggle");
+  const sidebar = document.getElementById("sidebar");
 
-// 點擊 body / document 其他地方收回 sidebar
-document.addEventListener('click', () => {
-  sidebar.classList.remove('show');
+  if (burger && sidebar) {
+    burger.addEventListener("click", (e) => {
+      sidebar.classList.toggle("show");
+      e.stopPropagation();
+    });
+
+    sidebar.addEventListener("click", (e) => e.stopPropagation());
+
+    document.addEventListener("click", () => {
+      sidebar.classList.remove("show");
+    });
+  }
 });

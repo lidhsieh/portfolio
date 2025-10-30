@@ -1,0 +1,86 @@
+    <header class="site-header">
+
+        <nav class="site-navbar px-4 py-2">
+            <div class="container-box">
+                <div class="row align-items-center">
+                    <div class="col-6 col-xl-2">
+                        <a href="" class="title text-black h2">LidHsieh</a>
+                    </div>
+                    <div class="col-10 col-md-8 d-none d-xxl-block">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item top">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item top">
+                                <a class="nav-link" href="#">Portrait 人像</a>
+                            </li>
+                            <li class="nav-item dropdown top">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sports
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Basketball 籃球</a></li>
+                                    <li><a class="dropdown-item" href="baseball.html">Baseball 棒球</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item top">
+                                <a class="nav-link" href="#">About Me 關於我</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col col-xxl-2 text-end">
+                        <ul class="d-none d-xxl-flex justify-content-end list-unstyled gap-3 mb-0">
+                            <!-- 
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="fa-brands fa-square-facebook fa-2x px-3"></i>
+                            </a>
+                        </li>
+                        -->
+                            <li>
+                                <a href="https://www.youtube.com/@lidhsieh" target="_blank">
+                                    <i class="fa-brands fa-square-youtube fa px-3" id="sidebar-toggle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/lidhsieh/" target="_blank">
+                                    <i class="fa-brands fa-square-instagram fa px-3"id="sidebar-toggle"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="d-inline-block d-xxl-none px-2 py-4">
+                            <i class="fa-solid fa-bars" id="sidebar-toggle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul class="nav flex-column">
+            <li class="collapse-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="collapse-item">
+                <a class="nav-link" href="#">Portrait 人像</a>
+            </li>
+            <a class="nav-link" id="sport-sidebar" role="button" data-bs-toggle="collapse" href="#sport-menu"
+                role="button" aria-expanded="false" aria-controls="collapseExample">
+                Sports
+            </a>
+            <ul class="collapse collapse-menu" aria-labelledby="sport-sidebar" data-bs-parent="#sidebar"
+                id="sport-menu">
+                <li><a class="collapse-item" href="#">Basketball 籃球</a></li>
+                <li><a class="collapse-item" href="Baseball.html">Baseball 棒球</a></li>
+            </ul>
+            </li>
+            <li class="collapse-item">
+                <a class="nav-link" href="#">About Me 關於我</a>
+            </li>
+        </ul>
+
+    </div>
+    </header>
