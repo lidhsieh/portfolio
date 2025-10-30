@@ -6,11 +6,6 @@ body {
     padding: 0;
 }
 
-#sidebar-toggle {
-    color: #4a4a4a;
-    font-size: clamp(20px, 3vw, 40px);
-    cursor: pointer;
-}
 
 .nav-link,
 .collapse-item {
@@ -29,6 +24,7 @@ body {
     letter-spacing: .1em;
     font-size: clamp(16px, 1vw, 24px);
 }
+
 
 /*-------------index---------------*/
 
@@ -118,4 +114,16 @@ body {
 .collapse-item {
     /* padding: 1em; */
     margin: 1em;
+}
+
+#sidebar-toggle {
+    color: #000000;
+    font-size: clamp(20px, 3vw, 56px);
+    cursor: pointer;
+}
+/* Navbar */
+.social-icon {
+    color: #4a4a4a;
+    font-size: clamp(20px, 3vw, 40px);
+    cursor: pointer;
 }
