@@ -6,9 +6,12 @@ body {
     padding: 0;
 }
 
+.nolist {
+    list-style: none;
+}
 
-.nav-link,
-.collapse-item {
+
+.nav-link {
     color: #000 !important;
 }
 
@@ -111,9 +114,10 @@ body {
     /* 加動畫效果 */
 }
 
-.collapse-item {
-    /* padding: 1em; */
-    margin: 1em;
+.collapse-list-item {
+    display: block;
+    margin-bottom: 12px;
+    color: #000 !important;
 }
 
 #sidebar-toggle {
@@ -121,6 +125,7 @@ body {
     font-size: clamp(20px, 3vw, 56px);
     cursor: pointer;
 }
+
 /* Navbar */
 .social-icon {
     color: #4a4a4a;

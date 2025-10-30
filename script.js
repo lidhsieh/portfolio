@@ -24,3 +24,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 });
+
+
+// footer
+const footer = document.createElement('footer');
+footer.className = 'footer px-5 py-2';
+footer.innerHTML = '<p>LidHsieh 2025</p>';
+document.body.appendChild(footer);
