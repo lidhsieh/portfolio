@@ -55,24 +55,41 @@
     <div class="sidebar" id="sidebar">
         <ul class="nav flex-column">
             <li class="collapse-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="collapse-item">
                 <a class="nav-link" href="portrait.html">Portrait 人像</a>
             </li>
-            <a class="nav-link collapse-item" id="sport-sidebar" role="button" data-bs-toggle="collapse" href="#sport-menu"
-                role="button" aria-expanded="false" aria-controls="collapseExample">
-                Sports 運動
-            </a>
-            <ul class="collapse nolist" aria-labelledby="sport-sidebar" data-bs-parent="#sidebar"
-                id="sport-menu">
-                <li><a class="collapse-list-item" href="#">Basketball 籃球</a></li>
-                <li><a class="collapse-list-item" href="Baseball.html">Baseball 棒球</a></li>
-            </ul>
+            <li class="collapse-item">
+                <a class="nav-link" id="sport-sidebar" data-bs-toggle="collapse" href="#sport-menu"
+                    aria-expanded="false">
+                    Sports 運動
+                </a>
+
+                <ul class="collapse nolist" aria-labelledby="sport-sidebar" data-bs-parent="#sidebar" id="sport-menu">
+                    <li><a class="collapse-list-item" href="#">Basketball 籃球</a></li>
+                    <li><a class="collapse-list-item" href="Baseball.html">Baseball 棒球</a></li>
+                </ul>
+            </li>
             <li class="collapse-item">
                 <a class="nav-link" href="#">About Me 關於我</a>
             </li>
         </ul>
-
     </div>
 </header>
+
+<script>
+    // 父選單元素
+    const sportSidebar = document.getElementById('sport-sidebar');
+    const sportMenu = document.getElementById('sport-menu');
+
+    // 監聽 collapse 展開
+    sportMenu.addEventListener('show.bs.collapse', () => {
+        sportSidebar.classList.add('active');
+    });
+
+    // 監聽 collapse 收合
+    sportMenu.addEventListener('hide.bs.collapse', () => {
+        sportSidebar.classList.remove('active');
+    });
+</script>

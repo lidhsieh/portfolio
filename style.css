@@ -13,7 +13,7 @@ body {
 
 .nav-link {
     color: #000 !important;
-    
+
 }
 
 .title {
@@ -29,7 +29,11 @@ body {
     font-size: clamp(16px, 1vw, 24px);
 }
 
-.dropdown-menu{
+.nav-item.top>a:hover {
+    color: rgb(137, 137, 137) !important;
+}
+
+.dropdown-menu {
     z-index: 1000;
 }
 
@@ -110,6 +114,26 @@ body {
     background-color: #f8f9fa;
     border-right: 1px solid #ddd;
 }
+
+li.collapse-item:hover > .nav-link,
+li.collapse-item > .nav-link.active {
+    background-color: rgb(255, 116, 16);
+    color: #fff !important;
+    border-radius: 6px;
+
+}
+
+.collapse-list-item:hover {
+    background-color: rgb(30, 210, 54);
+    color: #fff !important;
+    width: 100%;
+}
+
+.collapse.show {
+    display: block; /* Bootstrap collapse 預設 display:none */
+}
+
+
 
 .sidebar.show {
     right: 0;
