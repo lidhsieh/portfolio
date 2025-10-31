@@ -88,6 +88,25 @@ body {
     border-radius: 10px;
 }
 
+#fixh-thumbnails {
+  display: flex;
+  flex-wrap: wrap; /* 超出換行 */
+  justify-content: center; /* 或 center / space-between */
+  gap: 4px; /* 取代 padding，控制間距 */
+  font-size: 0; /* 消除 inline 元素間空白 */
+}
+
+.gallery-item {
+  flex: 0 0 auto; /* 不強制拉伸，寬度隨內容決定 */
+}
+
+.gallery-item > img {
+  height: 20vw; /* 高度固定 */
+  max-height: 250px;
+  width: auto;   /* 寬度自動，保持比例 */
+  display: block;
+}
+
 /*----------Nav------------*/
 .sidebar .collapse-item > .nav-link {
     padding: 8px 24px;
