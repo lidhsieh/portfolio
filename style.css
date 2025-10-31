@@ -10,7 +10,6 @@ body {
     list-style: none;
 }
 
-
 .nav-link {
     color: #000 !important;
 
@@ -21,21 +20,7 @@ body {
     padding: 12px;
 }
 
-.nav-item.top,
-.sidebar {
-    padding: 10px 10px;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-size: clamp(16px, 1vw, 24px);
-}
 
-.nav-item.top>a:hover {
-    color: rgb(137, 137, 137) !important;
-}
-
-.dropdown-menu {
-    z-index: 1000;
-}
 
 /*-------------index---------------*/
 
@@ -103,36 +88,58 @@ body {
     border-radius: 10px;
 }
 
-/* Sidebar */
+/*----------Nav------------*/
+.sidebar .collapse-item > .nav-link {
+    padding: 8px 24px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: clamp(16px, 1vw, 24px);
+}
+
+.nav-item.top>a:hover {
+    color: rgb(137, 137, 137) !important;
+}
+
+.dropdown-menu {
+    z-index: 1000;
+}
+
+/*------------ Sidebar ------------*/
 .sidebar {
     position: fixed;
     top: 0;
-    right: -250px;
+    right: -280px;
     height: 100vh;
-    width: 250px;
+    width: 280px;
     z-index: 1000;
     background-color: #f8f9fa;
     border-right: 1px solid #ddd;
 }
 
-li.collapse-item:hover > .nav-link,
-li.collapse-item > .nav-link.active {
-    background-color: rgb(255, 116, 16);
+li.collapse-item:hover>.nav-link,
+li.collapse-item>.nav-link.active {
+    background-color: rgb(137, 137, 137);
     color: #fff !important;
-    border-radius: 6px;
 
 }
 
+.sidebar .collapse-list-item {
+    padding: 8px 40px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: clamp(16px, 1vw, 24px);
+}
+
 .collapse-list-item:hover {
-    background-color: rgb(30, 210, 54);
+    background-color: rgb(61, 61, 61);
     color: #fff !important;
     width: 100%;
 }
 
 .collapse.show {
-    display: block; /* Bootstrap collapse 預設 display:none */
+    display: block;
+    /* Bootstrap collapse 預設 display:none */
 }
-
 
 
 .sidebar.show {
@@ -144,8 +151,8 @@ li.collapse-item > .nav-link.active {
 
 .collapse-list-item {
     display: block;
-    margin-bottom: 12px;
     color: #000 !important;
+    text-decoration: none !important;
 }
 
 #sidebar-toggle {
