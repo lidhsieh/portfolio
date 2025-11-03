@@ -1,23 +1,26 @@
-html,
+html {}
+
+header {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #919191;
+}
 body {
     position: relative;
     height: 90%;
     margin: 0;
     padding: 0;
+    background: #efefef !important;
 }
 
 .nolist {
     list-style: none;
 }
 
-.nav-link {
-    color: #000 !important;
-
-}
-
 .title {
-    font-size: clamp(20px, 3vw, 36px);
-    padding: 12px;
+    font-size: clamp(20px, 3vw, 28px);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 
@@ -89,26 +92,40 @@ body {
 }
 
 #fixh-thumbnails {
-  display: flex;
-  flex-wrap: wrap; /* 超出換行 */
-  justify-content: center; /* 或 center / space-between */
-  gap: 4px; /* 取代 padding，控制間距 */
-  font-size: 0; /* 消除 inline 元素間空白 */
+    display: flex;
+    flex-wrap: wrap;
+    /* 超出換行 */
+    justify-content: center;
+    /* 或 center / space-between */
+    gap: 4px;
+    /* 取代 padding，控制間距 */
+    font-size: 0;
+    /* 消除 inline 元素間空白 */
 }
 
 .gallery-item {
-  flex: 0 0 auto; /* 不強制拉伸，寬度隨內容決定 */
+    flex: 0 0 auto;
+    /* 不強制拉伸，寬度隨內容決定 */
 }
 
-.gallery-item > img {
-  height: 20vw; /* 高度固定 */
-  max-height: 250px;
-  width: auto;   /* 寬度自動，保持比例 */
-  display: block;
+.gallery-item>img {
+    height: 20vw;
+    /* 高度固定 */
+    max-height: 250px;
+    min-height: 150px;
+    width: auto;
+    /* 寬度自動，保持比例 */
+    display: block;
 }
 
 /*----------Nav------------*/
-.sidebar .collapse-item > .nav-link {
+.nav-link {
+    color: #000 !important;
+    font-size: clamp(1.2rem, 1vw, 1.5rem);
+}
+
+
+.sidebar .collapse-item>.nav-link {
     padding: 8px 24px;
     text-transform: uppercase;
     letter-spacing: .1em;
