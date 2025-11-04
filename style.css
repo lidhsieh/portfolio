@@ -218,7 +218,7 @@ li.collapse-item>.nav-link.active {
 }
 
 .brand-item img {
-  max-width: 100px;
+  max-width: 120px;
   object-fit: cointain;
   display: block;
   margin: 0 auto;
