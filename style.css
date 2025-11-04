@@ -208,3 +208,28 @@ li.collapse-item>.nav-link.active {
     max-width: 80px;
     border-radius: 16px;
 }
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-item img {
+  max-width: 100px;
+  object-fit: cointain;
+  display: block;
+  margin: 0 auto;
+}
+
+.brand-item p {
+  display: block;
+  margin: 0; 
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+.partners-name{
+    font-size: 12px !important;
+}
