@@ -203,3 +203,8 @@ li.collapse-item>.nav-link.active {
     font-size: clamp(20px, 3vw, 40px);
     cursor: pointer;
 }
+/* ------------ About ------------*/
+.brand-logo{
+    max-width: 80px;
+    border-radius: 16px;
+}
