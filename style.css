@@ -1,8 +1,9 @@
 /*-------------normal---------------*/
 header {
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
 }
+
 body {
     position: relative;
     height: 90%;
@@ -108,11 +109,26 @@ body {
     /* 不強制拉伸，寬度隨內容決定 */
 }
 
+.gallery-item-b {
+    flex: 0 0 auto;
+    /* 不強制拉伸，寬度隨內容決定 */
+}
+
 .gallery-item>img {
     height: 20vw;
     /* 高度固定 */
     max-height: 250px;
     min-height: 150px;
+    width: auto;
+    /* 寬度自動，保持比例 */
+    display: block;
+}
+
+.gallery-item-b>img {
+    height: 20vw;
+    /* 高度固定 */
+    max-height: 400px;
+    min-height: 200px;
     width: auto;
     /* 寬度自動，保持比例 */
     display: block;
@@ -203,33 +219,36 @@ li.collapse-item>.nav-link.active {
     font-size: clamp(20px, 3vw, 40px);
     cursor: pointer;
 }
+
 /* ------------ About ------------*/
-.brand-logo{
+.brand-logo {
     max-width: 80px;
     border-radius: 16px;
 }
+
 .brand-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 8px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .brand-item img {
-  max-width: 120px;
-  object-fit: cointain;
-  display: block;
-  margin: 0 auto;
+    max-width: 120px;
+    object-fit: cointain;
+    display: block;
+    margin: 0 auto;
 }
 
 .brand-item p {
-  display: block;
-  margin: 0; 
-  font-weight: 900;
-  font-size: 0.9rem;
+    display: block;
+    margin: 0;
+    font-weight: 900;
+    font-size: 0.9rem;
 }
-.partners-name{
+
+.partners-name {
     font-size: 12px !important;
 }
