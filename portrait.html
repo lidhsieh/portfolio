@@ -37,21 +37,35 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="script.js"></script>
+        
         <script>
-                const gallery = document.getElementById("fixh-thumbnails");
+        const gallery = document.getElementById("fixh-thumbnails");
 
-                let html = "";
+        let html = "";
 
-                for (let i = 1; i <= 38; i++) {
-                        html += `
-                    <a class="gallery-item-b" href="portraits/Portraits-${i}.webp">
-                        <img src="Portraits/portraits-${i}-300px.webp" />
-                    </a>
-                `;
-                }
+        // 固定前五張
+        let firstFive = [5, 4, 20, 36, 9];
 
-                gallery.innerHTML = html;
-        </script>
+        // 剩下的圖片
+        let remaining = Array.from({ length: 38 }, (_, i) => i + 1)
+            .filter(i => !firstFive.includes(i));
+
+        // 隨機打亂剩餘圖片
+        remaining.sort(() => Math.random() - 0.5);
+
+        // 合併順序
+        let images = [...firstFive, ...remaining];
+
+        for (let i of images) {
+            html += `
+            <a class="gallery-item-b" href="portraits/portraits-${i}.webp">
+                <img src="portraits/portraits-${i}-300px.webp" />
+            </a>
+        `;
+        }
+
+        gallery.innerHTML = html;
+    </script>
         <!-- lightgallery plugins -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/lightgallery.min.js"></script>
         <script>

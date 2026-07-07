@@ -40,7 +40,20 @@
 
         let html = "";
 
-        for (let i = 1; i <= 34; i++) {
+        // 固定前五張
+        let firstFive = [5, 6, 7, 8, 11];
+
+        // 剩下的圖片
+        let remaining = Array.from({ length: 45 }, (_, i) => i + 1)
+            .filter(i => !firstFive.includes(i));
+
+        // 隨機打亂剩餘圖片
+        remaining.sort(() => Math.random() - 0.5);
+
+        // 合併順序
+        let images = [...firstFive, ...remaining];
+
+        for (let i of images) {
             html += `
             <a class="gallery-item-b" href="Event/event-${i}.webp">
                 <img src="Event/event-${i}-300px.webp" />
