@@ -18,12 +18,27 @@
                         <li class="nav-item dropdown top">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
+                                Product 商品
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="product-cutout.html">白背景</a></li>
+                                <li><a class="dropdown-item" href="styled-product-shot.html">商品情境</a></li>
+                            </ul>
+                        </li>
+                        <!--
+                            <li class="nav-item dropdown top">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Sports 運動
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="basketball.html">Basketball 籃球</a></li>
                                 <li><a class="dropdown-item" href="baseball.html">Baseball 棒球</a></li>
                             </ul>
+                        </li>
+                        -->
+                        <li class="nav-item top">
+                            <a class="nav-link" href="event.html">Event 活動</a>
                         </li>
                         <li class="nav-item top">
                             <a class="nav-link" href="aboutme.html">About Me 關於我</a>
@@ -67,15 +82,18 @@
                 <a class="nav-link" href="portrait.html">Portrait 人像</a>
             </li>
             <li class="collapse-item">
-                <a class="nav-link" id="sport-sidebar" data-bs-toggle="collapse" href="#sport-menu"
+                <a class="nav-link" id="produ-sidebar" data-bs-toggle="collapse" href="#produ-menu"
                     aria-expanded="false">
-                    Sports 運動
+                    Product 商品
                 </a>
 
-                <ul class="collapse nolist ps-0" aria-labelledby="sport-sidebar" data-bs-parent="#sidebar" id="sport-menu">
-                    <li><a class="collapse-list-item" href="basketball.html">Basketball 籃球</a></li>
-                    <li><a class="collapse-list-item" href="baseball.html">Baseball 棒球</a></li>
+                <ul class="collapse nolist ps-0" aria-labelledby="produ-sidebar" data-bs-parent="#sidebar" id="produ-menu">
+                    <li><a class="dropdown-item" href="product-cutout.html">白背景</a></li>
+                                <li><a class="dropdown-item" href="styled-product-shot.html">商品情境</a></li>
                 </ul>
+            </li>
+            <li class="collapse-item">
+                <a class="nav-link" href="event.html">Event 活動</a>
             </li>
             <li class="collapse-item">
                 <a class="nav-link" href="aboutme.html">About Me 關於我</a>
@@ -86,16 +104,16 @@
 
 <script>
     // 父選單元素
-    const sportSidebar = document.getElementById('sport-sidebar');
-    const sportMenu = document.getElementById('sport-menu');
+    const produSidebar = document.getElementById('produ-sidebar');
+    const produMenu = document.getElementById('produ-menu');
 
     // 監聽 collapse 展開
-    sportMenu.addEventListener('show.bs.collapse', () => {
-        sportSidebar.classList.add('active');
+    produMenu.addEventListener('show.bs.collapse', () => {
+        produSidebar.classList.add('active');
     });
 
     // 監聽 collapse 收合
-    sportMenu.addEventListener('hide.bs.collapse', () => {
-        sportSidebar.classList.remove('active');
+    produMenu.addEventListener('hide.bs.collapse', () => {
+        produSidebar.classList.remove('active');
     });
 </script>
