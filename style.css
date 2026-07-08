@@ -126,12 +126,26 @@ body {
 
 .gallery-item-b>img {
     height: 20vw;
-    /* 高度固定 */
     max-height: 400px;
     min-height: 200px;
     width: auto;
-    /* 寬度自動，保持比例 */
     display: block;
+}
+
+@media (max-width: 576px) {
+    .gallery-item-b {
+        width: 100%;
+    }
+
+    .gallery-item-b img {
+        width: 100%;
+        height: auto !important;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: auto;
+        object-fit: contain;
+        display: block;
+    }
 }
 
 /*----------Nav------------*/

@@ -37,7 +37,6 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="script.js"></script>
-        
         <script>
         const gallery = document.getElementById("fixh-thumbnails");
 
@@ -59,13 +58,12 @@
         for (let i of images) {
             html += `
             <a class="gallery-item-b" href="Portraits/portraits-${i}.webp">
-                <img src="Portraits/portraits-${i}-300px.webp" />
+                <img src="Portraits/portraits-${i}-500px.webp" />
             </a>
-        `;
+                `;
         }
-
         gallery.innerHTML = html;
-    </script>
+        </script>
         <!-- lightgallery plugins -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.3/lightgallery.min.js"></script>
         <script>
